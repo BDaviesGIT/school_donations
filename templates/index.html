@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
   <title>School Donations Dashboard</title>
   <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
   <link rel="stylesheet" href="{{ url_for ('static',
@@ -10,75 +15,50 @@
   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
   <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
 </head>
+
+
+
+<!--body Starts here-->
 <body class="application">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="./">School Donations Dashboard</a>
-        <button class="intro_button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
+
+
+<!--Main Container-->
+  <div class="row">
+    <div class="col-sm-12">
+
+<!--Navigation Bar code-->
+
+  <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="Navigation"> 
+      <div class="container">
+          <div class="Navbar-header">
+            <a href="#" class="navbar-brand">School Donations Data</a>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+              </button>
+          </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="index.html">Data</a></li>
+                  <li><a href="contact-us.html">Contact us</a></li>
+                </ul>
+
+            <button type ="button" class="btn btn-default navbar-btn" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!
+            </button>
+           </div> 
       </div>
-    </div>
   </div>
-  <div  id="outer" class="container-fluid">
-    <div class="row">
-      <div class="col-sm-8">
-        <div class="row">
-          <!-- Time Chart -->
-          <div class="col-sm-12">
-            <div class="chart-wrapper">
-              <div class="chart-title">
-                Number of Donations
-              </div>
-              <div class="chart-stage">
-                <div id="time-chart"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Time Chart -->
 
-          <!-- Resources -->
-          <div data-step="1" data-intro="The description that you want" style="font-weight: normal" data-position="right" class="col-sm-6">
-            <div class="chart-wrapper">
-              <div class="chart-title">
-                Resources Type
-              </div>
-              <div class="chart-stage">
-                <div id="resource-type-row-chart"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Resources -->
 
-          <!-- funding Pie -->
-          <div class="col-sm-6">
-            <div class="chart-wrapper">
-              <div class="chart-title">
-                Funding Status
-              </div>
-              <div class="chart-stage">
-                <div id="funding-chart"></div>
-              </div>
-            </div>
-          </div>
-          <!-- funding Pie -->
-        </div>
-      </div>
-
-      <!-- Poverty -->
-      <div class="col-sm-3">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Poverty Level
-          </div>
-          <div class="chart-stage">
-            <div id="poverty-level-row-chart"></div>
-          </div>
-        </div>
-      </div>
-      <!-- Poverty -->
+<!--content-->                
+                
+    <div class='container'>
+     <div class='col-md-12'>
 
       <!-- menu select -->
-      <div class="col-sm-6">
+      <div data-step="1" data-intro="Select state to view relevent data" style="font-weight: normal" data-position="right" class="col-sm-12">
         <div class="chart-wrapper">
           <div class="chart-title">
             Donation State
@@ -90,8 +70,63 @@
       </div>
       <!-- menu select -->
 
+          <!-- Time Chart -->
+          <div data-step="2" data-intro="Line chart showing total donations over time" style="font-weight: normal" data-position="left" class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Number of Donations
+              </div>
+              <div class="chart-stage">
+                <div id="time-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Time Chart -->
+
+
+          <!-- Resources -->
+          <div data-step="3" data-intro="Bar chart showing Resource types donated & quantities" style="font-weight: normal" data-position="right" class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Resources Type
+              </div>
+              <div class="chart-stage">
+                <div id="resource-type-row-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Resources -->
+
+
+          <!-- funding Pie -->
+          <div data-step="4" data-intro="Funding status pie chart" style="font-weight: normal" data-position="left" class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Funding Status
+              </div>
+              <div class="chart-stage">
+                <div id="funding-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- funding Pie -->
+
+      <!-- Poverty -->
+      <div data-step="5" data-intro="Bar chart displaying poverty levels for schools." style="font-weight: normal" data-position="right" class="col-sm-7">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Poverty Level
+          </div>
+          <div class="chart-stage">
+            <div id="poverty-level-row-chart"></div>
+          </div>
+        </div>
+       </div> 
+      <!-- Poverty -->
+
+
       <!-- Metric 1 -->
-      <div class="col-sm-2">
+      <div data-step="6" data-intro="Quantity for total number of donations" style="font-weight: normal" data-position="left" class="col-sm-5">
         <div class="chart-wrapper">
           <div class="chart-title">
             Total Number of Donations
@@ -111,7 +146,7 @@
       <!-- Metric 1 -->
 
       <!-- Metric 2 -->
-      <div class="col-sm-2">
+      <div data-step="7" data-intro="Quantity of total donations for selected area in dollars ($)" style="font-weight: normal" data-position="left" class="col-sm-5">
         <div class="chart-wrapper">
           <div class="chart-title">
             Total Donations in USD
@@ -122,10 +157,11 @@
         </div>
       </div>
       <!-- Metric 2 -->
+
+
     </div>
   </div>
   <hr>
-  <p class="small text-muted"> Data Dashboard template from Code Institute</p>
   <script src="{{url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>
   <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
@@ -135,5 +171,14 @@
   <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+
+      </div>
+
+   <div class='col-md-12'>
+        <footer class="col-12">
+          <p> Website by Ben Davies, 2017.</p>
+          <p>This website has been produced as a coursework assignment for part of the "Code Institute" online curriculum. I claim no ownership over any of the images, music or videos used as part of this website, which exists for educational purposes only.</p>
+        </footer>
+     </div>   
 </body>
 </html>
