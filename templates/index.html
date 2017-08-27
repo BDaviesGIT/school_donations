@@ -7,55 +7,122 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
   <title>School Donations Dashboard</title>
-  <link rel="stylesheet" href="{{url_for ('static', filename='lib/css/introjs.css')}}" />
-  <link rel="stylesheet" href="{{ url_for ('static',
-    filename='lib/css/bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{ url_for ('static',
-    filename='lib/css/keen-dashboards.css')}}">
-  <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
-  <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+
+<!--CSS-->
+  <link rel="stylesheet" type="text/css" href="../static/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="../static/lib/css/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="../static/lib/css/introjs.css">
+  <link rel="stylesheet" type="text/css" href="../static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" type="text/css" href="../static/lib/css/dc.css">
+
+  <link rel="stylesheet" type="text/css" href="../static/css/custom.css">
+
+<!--Javascript-->
+
+<script type="text/javascript" src="../static/lib/js/crossfilter.js"></script>
+<script type="text/javascript" src="../static/lib/js/d3.js"></script>
+<script type="text/javascript" src="../static/lib/js/dc.js"></script>
+<script type="text/javascript" src="../static/lib/js/intro.js"></script>
+<script type="text/javascript" src="../static/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/keen.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/queue.js"></script>
+<script type="text/javascript" src="../static/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/js/graph.js"></script>
+
+
 </head>
 
-
-
 <!--body Starts here-->
-<body class="application">
 
+<body>
 
 <!--Main Container-->
-  <div class="row">
-    <div class="col-sm-12">
+<div class="container">
+  <div class="col-sm-12">
 
 <!--Navigation Bar code-->
+<header>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#top">"For a Brighter Future"</a>
+              </div><!-- navbar-header -->
 
-  <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="Navigation"> 
-      <div class="container">
-          <div class="Navbar-header">
-            <a href="#" class="navbar-brand">School Donations Data</a>
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-              </button>
-          </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="home.html">Home</a></li>
-                  <li><a href="index.html">Data</a></li>
-                  <li><a href="contact-us.html">Contact us</a></li>
-                </ul>
+              <div class="collapse navbar-collapse" id="collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="active"><a href="#home">Home</a></li>
+                      <li><a href="#Data">Data</a></li>
+                      <li><a href="#Contact">Contact us</a></li>
+                  </ul>
+                   <button type ="button" class="btn btn-default navbar-btn" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!
+              </div><!-- collapse navbar-collapse -->
+          </div><!-- container -->
+      </nav>
+  </header>
 
-            <button type ="button" class="btn btn-default navbar-btn" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!
-            </button>
-           </div> 
-      </div>
+
+<!--content-->     
+
+<section>
+      <h3 id="home">Our Candidate</h3>
+</section>
+
+  <!--header image-->
+   <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+      <img src="../static/Images/pennsylvania.jpg" class="center-block img-responsive">
+    </div>
   </div>
+ </div> 
 
 
-<!--content-->                
+
+  <div class='row'>
+      <div class='col-sm-12'>
+
+  <h1>Jonnathan Phillips</h1>
+  <h3> For office as Governor of Pennsylvania </h3>
+  <p>dsdasdasdd ddddddddddddddddd dddddddddddddddd dasdasdasdasasasdasdasddhajs dhajksdal sk dlksajdkas dlkajd kasj dasjlkajdlajslkajkd.</p>
+  <p>sdfasjdas jdlasjd;lsakdl;sakd;lsdkasldashdasdha sdkhsjdddddddddddddddddddd ddddd ddddddddddddd dd ddddddddddddddddddddddddddd dddddddddddddddddddddddddddd dddddddddddddddd dddddddddddddddddddddddddddddddddd</p>
+  <p>jaskdddddddddddddddddddddd ddddd dddddddddddddd dddddddddlasods;ldk asssssssss sssssssssssssss sssssssss sssssssssss sddddddddddd ddddddddddddd ddddssssss</p>
+      </div>
+   </div>
+   
+
+    <div class='row'>
+      <div class='col-sm-6'>
+      <h3> Our Pledge </h3>
+  <p>dsdasdasdd ddddddddddddddddd dddddddddddddddd dasdasdasdasasasdasdasddhajs dhajksdal sk dlksajdkas dlkajd kasj dasjlkajdlajslkajkd.</p>
+      </div>
+
+
+    <div class='col-sm-5'>
+      <h3> PIC OF CANDIDATE </h3>
+    </div>
+   </div>
+
+    <div class='row'>
+      <div class='col-sm-12'>
+  <p>dsdasdasdd ddddddddddddddddd dddddddddddddddd dasdasdasdasasasdasdasddhajs dhajksdal sk dlksajdkas dlkajd kasj dasjlkajdlajslkajkd asdsadsd fgdsds  fssfsdsddf fsdsdfsfsd fsdfsfsfd fsdfsdfsf fsdfdsfs fsdfsfs fsdfsdfds fsdfsfs fsdfsdfs fsfsf.</p>
+      </div>
+      </div>
+
+
+
+<!--data dashboard-->  
+<hr>
+
+<section>
+      <h3 id="Data">Data Dashboard</h3>
+</section>
                 
-    <div class='container'>
-     <div class='col-md-12'>
 
       <!-- menu select -->
       <div data-step="1" data-intro="Select state to view relevent data" style="font-weight: normal" data-position="right" class="col-sm-12">
@@ -71,7 +138,7 @@
       <!-- menu select -->
 
           <!-- Time Chart -->
-          <div data-step="2" data-intro="Line chart showing total donations over time" style="font-weight: normal" data-position="left" class="col-sm-12">
+          <div data-step="2" data-intro="Line chart showing total donations over time" style="font-weight: normal" data-position="right" class="col-sm-12">
             <div class="chart-wrapper">
               <div class="chart-title">
                 Number of Donations
@@ -156,29 +223,88 @@
           </div>
         </div>
       </div>
+</div>
+
+  <div class='row'>
+      <div class='col-sm-12'>
+      <hr>
+      </div>
+  </div>   
       <!-- Metric 2 -->
 
+<!--Contact us-->
 
+
+   <section>
+      <h3 id="Contact"></h3>
+   </section>
+   
+  <!--Jumbotron-->
+   <div class="container">
+    <div class="row">
+      <div class="col-sm-12 jumbotron">
+      <div class="text-center">
+
+
+        <h1> Contact us</h1>
     </div>
-  </div>
-  <hr>
-  <script src="{{url_for ('static', filename='lib/js/intro.js')}}" type="text/javascript"></script>
-  <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
-  <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
-  <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
-  <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
-  <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
-  <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
-  <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
-  <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+</div>
+</div>
+</div>
+
+  <div class='row'>
+      <div class='col-sm-12'>
+
+  <p> Your views are important, let us know what you think and get in touch.
+
+<h3> Membership enquiry </h3>
+
+<p>If you have a membership question you would like to ask please complete this form and press submit to contact us.</p>
+
+<h3>Policy enquiry</h3>
+
+<p>If you have a policy question you would like to ask please complete this form and press submit to contact us.</p>
+
+<h3>Send us your question for Theresa May</h3>
+
+<p>Jeremy Corbyn wants to hear your questions for Theresa May to hold her to account at Prime Minister’s Questions. Send us your questions for the Prime Minister.<p>
+
+<h3>Other ways to contact us<h3>
+
+<p>If you want to send us a letter our address is:</p>
+
+<P>The Labour Party
+Labour Central, Kings Manor
+Newcastle upon Tyne NE1 6PA</p>
+
+<P>You can also call the Labour Party on 0345 092 2299. </p>
+
+<p>Calls to this number are charged at a local rate from landlines and mobiles and will be included in any mobile minutes you have.
+
+The Labour Party may contact you using the information you supply.​</p>
 
       </div>
 
+   </div>
+   
+   </div>
+</div>
+
+
+  <!--end image-->
+   <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+      <img src="../static/Images/Rally6.jpg" class="center-block img-responsive">
+    </div>
+  </div>
+
+
+<hr>
    <div class='col-md-12'>
-        <footer class="col-12">
           <p> Website by Ben Davies, 2017.</p>
           <p>This website has been produced as a coursework assignment for part of the "Code Institute" online curriculum. I claim no ownership over any of the images, music or videos used as part of this website, which exists for educational purposes only.</p>
         </footer>
-     </div>   
+
 </body>
 </html>
