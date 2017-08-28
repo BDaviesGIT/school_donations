@@ -60,7 +60,7 @@ function makeGraphs(error, donorsUSProjects) {
 
     //Charts
     var timeChart = dc.lineChart("#time-chart");
-    var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
+    var resourceTypeChart = dc.pieChart("#resource-type-row-chart");
     var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
     var numberProjectsND = dc.numberDisplay("#number-projects-nd");
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
@@ -88,7 +88,7 @@ function makeGraphs(error, donorsUSProjects) {
         .formatNumber(d3.format(".3s"));
 
     timeChart
-        .ordinalColors(["#C96A23"])
+        .ordinalColors(["#fb8c00"])
         .width(1200)
         .height(300)
         .margins({top: 30, right: 50, bottom: 30, left: 50})
@@ -103,26 +103,28 @@ function makeGraphs(error, donorsUSProjects) {
 
 
     resourceTypeChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
-        .width(300)
+        .ordinalColors(["#66b3ff", "#6666ff", "#9966ff", "#ffb366", "#F5821F", "#cccc00","#66cc00"])
         .height(250)
+        .radius(90)
+        .innerRadius(40)
+        .transitionDuration(1500)
         .dimension(resourceTypeDim)
         .group(numProjectsByResourceType)
-        .xAxis().ticks(4);
+
 
     povertyLevelChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
-        .width(300)
+        .ordinalColors(["#cc3300", "#cc0000", "#66cc00", "#cccc00", "#F5821F"])
+        .width(400)
         .height(250)
         .dimension(povertyLevelDim)
         .group(numProjectsByPovertyLevel)
         .xAxis().ticks(4);
 
     fundingStatusChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
-        .height(220)
-        .radius(90)
-        .innerRadius(40)
+        .ordinalColors(["#66cc00", "#cc0000", "#cc9900", "#D3D1C5", "#F5821F"])
+        .height(500)
+        .radius(250)
+        .innerRadius(100)
         .transitionDuration(1500)
         .dimension(fundingStatus)
         .group(numProjectsByFundingStatus);
