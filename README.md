@@ -49,10 +49,10 @@ The primary goal for this website is to display data from a CSV file in an inter
     - **DC** Used as a wrapper for D3 plugin. Simplifies chart parameters required in code. The .Css file contains parameters for chart stylings.
 
 - CrossFilter
-    -**Crossfilter** for exploring large datasets in browser and allows for data analysis.
+    - **Crossfilter** for exploring large datasets in browser and allows for data analysis.
 
 - Queue.js
-    -**Queue** is an asynchronous helper libary for data use, involving a number of api's. This plugin waits till data is available from each api before passing on the combined data for processing by the app.
+    - **Queue** is an asynchronous helper libary for data use, involving a number of api's. This plugin waits till data is available from each api before passing on the combined data for processing by the app.
 
 - keen-dashboards
 	- **Keen-dashboards** a template libary for the data dashboard.
@@ -61,10 +61,10 @@ The primary goal for this website is to display data from a CSV file in an inter
     - **Introjs** provides functionality for a tutorial to the data dashboard. When the "tutorial button" is pressed, a number of pop up windows will appear in sequence. Browsers will autofocus on these as the user selects next/ previous, till cancelled or all tutorial popups have been displayed.
 
 - Pymongo
-	-**Pymongo** is a plugin for python to allow it to access and interact with MongoDB.
+	- **Pymongo** is a plugin for python to allow it to access and interact with MongoDB.
 
 - [Mongodb](https://www.mongodb.com/download-center)
-	-**MongoDB** Allows for the deployment of a dataset into a database.
+	- **MongoDB** Allows for the deployment of a dataset into a database.
 
 - [Heroku](https://signup.heroku.com/)
-	-**Heroku** is the online platform used to host the Flask app (site).
+	- **Heroku** is the online platform used to host the Flask app (site).
