@@ -37,9 +37,9 @@ def donor_projects():
     # Open a connection to MongoDB using a with statement such that the
     # connection will be closed as soon as we exit the with statement
     # The MONGO_URI connection is required when hosted using a remote mongo db.
-    with MongoClient(MONGO_URI) as conn:
+    with MongoClient mongodb://bdavies27:bob@ds119064.mlab.com:19064/heroku_9g2dlz36 as conn:
         # Define which collection we wish to access
-        collection = conn[DBS_NAME][COLLECTION_NAME]
+        collection = conn heroku_9g2dlz36 projects
         # Retrieve a result set only with the fields defined in FIELDS
         # and limit the the results to a lower limit of 20000
         projects = collection.find(projection=FIELDS, limit=20000)
