@@ -13,18 +13,18 @@ The primary goal for this website is to display data from a CSV file in an inter
 ## Features 
 
 ### Existing Features
--Clean & clear Layout, fully responsive utilising bootstrap. Seamless "one page" design for ease of use and better presentation of topic material.
--Full navigation between sectons with responsive design. The site will load to the top of the "Our Candidate" section upon refresh.
--Home Section ("Our Candidate") introducing our candidate and general outline of major policys. Image of candidate and skyline view of Pennsylvania.
--Contact us section promiting candidate Rallies, as well as providing contact information for would be voters. Image of students attending a rally at the bottom of the section with the candidate's Slogan.
--Data Dashboard. Tutorial button for users with guidence for how to interact with this element of the site. Can navigate between tutorial points via "next"/ "previous" buttons. Powered by "introjs.css".
--Data Dashboard. Select district for PA box.
--Data Dashboard. Number of donations line chart.
--Data Dashboard. Poverty Levels Bar Chart.
--Data Dashboard. Resource types pie Chart.
--Data Dashboard. Funding Status pie Chart.
--Line breaks between sections.
--page footer.
+- Clean & clear Layout, fully responsive utilising bootstrap. Seamless "one page" design for ease of use and better presentation of topic material.
+- Full navigation between sectons with responsive design. The site will load to the top of the "Our Candidate" section upon refresh.
+- Home Section ("Our Candidate") introducing our candidate and general outline of major policys. Image of candidate and skyline view of Pennsylvania.
+- Contact us section promiting candidate Rallies, as well as providing contact information for would be voters. Image of students attending a rally at the bottom of the section with the candidate's Slogan.
+- Data Dashboard. Tutorial button for users with guidence for how to interact with this element of the site. Can navigate between tutorial points via "next"/ "previous" buttons. Powered by "introjs.css".
+- Data Dashboard. Select district for PA box.
+- Data Dashboard. Number of donations line chart.
+- Data Dashboard. Poverty Levels Bar Chart.
+- Data Dashboard. Resource types pie Chart.
+- Data Dashboard. Funding Status pie Chart.
+- Line breaks between sections.
+- page footer.
 
 ### Features Left to Implement
 -N/A
