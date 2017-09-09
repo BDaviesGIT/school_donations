@@ -1,1 +1,1 @@
-web: gunicorn Assignment2:app
+web: gunicorn school_donations:app
